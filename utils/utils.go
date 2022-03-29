@@ -5,7 +5,7 @@ import (
 	"io/ioutil"
 	"net/http"
 
-	"github.com/hyplabs/dfinity-oracle-framework/models"
+	"github.com/triipme/dfinity-oracle-framework/models"
 	"github.com/oliveagle/jsonpath"
 )
 
