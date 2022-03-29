@@ -35,11 +35,11 @@ func NewOracle(config *models.Config, engine *models.Engine) *Oracle {
 }
 
 // Bootstrap bootstraps the canister installation
-func (o *Oracle) Bootstrap(replaceCanisterCode bool) error {
+func (o *Oracle) Bootstrap() error {
 	if err := o.dfxService.createNewDfxProject(); err != nil {
 		panic(err)
 	}
-	if replaceCanisterCode {
+	if o.config.ReplaceCanisterCode {
 		if err := o.dfxService.updateCanisterCode(); err != nil {
 			panic(err)
 		}
